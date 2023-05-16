@@ -172,6 +172,9 @@ sButton.addEventListener("mouseout", function() {
 });
 
 
+form.setAttribute("action", "javascript:void(0);");
+
+
 toggleDarkModeButton.addEventListener('click', function() {
   body.classList.toggle('dark-mode');
 });
