@@ -61,11 +61,16 @@ form.addEventListener("submit", function(event) {
   }
 
   // Validação da Senha
+
   const senha = inputSenha.value.trim();
-  if (senha.length < 6 || senha.length > 8) {
+  if (senha.length === 0) {
+    displayError(inputSenha, "O campo de senha é obrigatório.");
+    return;
+  } else if (senha.length < 6 || senha.length > 8) {
     displayError(inputSenha, "A senha deve ter entre 6 e 8 caracteres.");
     return;
   }
+
 
   const confirmacaoSenha = inputCSenha.value.trim();
   if(confirmacaoSenha !== senha){
@@ -75,9 +80,14 @@ form.addEventListener("submit", function(event) {
     return;
   }
 
+  // Verifica se todos os campos estão preenchidos
+  if (!name && !sName && !email && !senha && !confirmacaoSenha) {
+    alert("Todos os campos devem ser preenchidos.");
+    return;
+  }
   // Se todas as validações passarem, você pode prosseguir com o envio do formulário
-  // form.submit();
   alert("Cadastro realizado com sucesso!");
+  form.submit();
 });
 
 
@@ -139,10 +149,28 @@ function clearError(input) {
 input.classList.remove("error");
 }
 
+const dmButton = document.getElementById("toggle-dark-mode");
+const sButton = document.getElementById("sendButton");
 
 
 const toggleDarkModeButton = document.getElementById('toggle-dark-mode');
 const body = document.body;
+
+dmButton.addEventListener("mouseover", function() {
+  dmButton.style.cursor = "pointer";
+});
+dmButton.addEventListener("mouseout", function() {
+  dmButton.style.cursor = "auto";
+});
+
+
+sButton.addEventListener("mouseover", function() {
+  sButton.style.cursor = "pointer";
+});
+sButton.addEventListener("mouseout", function() {
+  sButton.style.cursor = "auto";
+});
+
 
 toggleDarkModeButton.addEventListener('click', function() {
   body.classList.toggle('dark-mode');
