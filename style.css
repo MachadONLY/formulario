@@ -3,6 +3,10 @@
     padding: 0px;
 }
 
+.error {
+    border: 2px solid red;
+  }
+
 body {
     font-family: sans-serif;
     display: flex;
