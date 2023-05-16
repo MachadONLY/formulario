@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="./js/cp2.js" defer></script>
+
+</head>
+<body>
+    <div class="content">
+        <h1 id="titulo">Formulário</h1>
+        <form action="index.html" name="cadastro" method="get" id="form" onsubmit="return false">
+            <div>
+                <label for="p-nome">Nome: </label>
+                <input type="text" name="primeiroNome" id="p-nome" class="inputs"><br>
+            </div>
+
+            <div>
+                <label for="s-nome">Sobrenome: </label>
+                <input type="text" name="segundoNome" id="s-nome" class="inputs"><br>
+            </div>
+
+            <div>
+                <label for="email">E-mail: </label>
+                <input type="text" name="email" id="email" class="inputs"><br>
+            </div>
+
+            <div>
+                <label for="senha">Senha (Mín. 6 caracteres):</label>
+                <input type="password" name="senha" id="senha" class="inputs"><br>
+            </div>
+
+            <div>
+                <label for="c-senha">Confirme: </label>
+                <input type="password" name="confirmeSenha" id="c-senha" required class="inputs">
+            </div>
+
+            <button type="button" id="toggle-dark-mode">Alternar Modo</button>
+        
+            <button type="submit" class="button">Enviar</button>
+        </form> 
+    </div>
