@@ -87,6 +87,12 @@ body {
     width: 150px;
   }
 
+
+  .dark-mode .inputs {
+    background-color: #333;
+    color: #fff;
+  }
+  
   
 
 
