@@ -1,6 +1,10 @@
 const form = document.getElementById("form");
 const inputName = document.getElementById("p-nome");
+const labelName = document.querySelector("label[for='p-nome']");
+
 const inputSName = document.getElementById("s-nome");
+const labelSName = document.querySelector("label[for='s-nome']");
+
 const inputEmail = document.getElementById("email");
 
 const inputSenha = document.querySelector("input[name='senha']");
@@ -9,6 +13,30 @@ const labelSenha = document.querySelector("label[for='senha']");
 const inputCSenha = document.querySelector("input[name='confirmeSenha']");
 const labelCSenha = document.querySelector("label[for='c-senha']");
 
+
+inputName.addEventListener("keyup", ()=>{
+
+  if(inputName.value.length < 5){
+    inputName.setAttribute("style", "outline-color:#B00000");
+    labelName.setAttribute("style", "color:#B00000");
+  }else{
+    inputName.setAttribute("style", "outline-color:#dddddd");
+    labelName.setAttribute("style", "color:#049200");
+  }
+  
+});  
+
+inputSName.addEventListener("keyup", ()=>{
+
+  if(inputSName.value.length < 5){
+    inputSName.setAttribute("style", "outline-color:#B00000");
+    labelSName.setAttribute("style", "color:#B00000");
+  }else{
+    inputSName.setAttribute("style", "outline-color:#dddddd");
+    labelSName.setAttribute("style", "color:#049200");
+  }
+  
+});
 
 inputSenha.addEventListener("keyup", ()=>{
 
@@ -19,7 +47,7 @@ inputSenha.addEventListener("keyup", ()=>{
     inputSenha.setAttribute("style", "outline-color:#dddddd");
     labelSenha.setAttribute("style", "color:#049200");
   }
-
+  
 });  
 
 
@@ -57,6 +85,7 @@ function displayError(input, message) {
 
 
 form.addEventListener("submit", function(event) {
+  event.preventDefault();
   
   // Validação do Primeiro Nome
   const name = inputName.value.trim();
@@ -100,9 +129,9 @@ form.addEventListener("submit", function(event) {
     return;
   }
 
-  // Se todas as validações passarem, você pode prosseguir com o envio do formulário
-  alert("Cadastro realizado com sucesso!");
   form.submit();
+  alert("Cadastro realizado com sucesso!");
+    
 });
 
 

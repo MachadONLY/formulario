@@ -68,31 +68,31 @@ body {
 }
   
 
-  #toggle-dark-mode{
-    background-color: #ffffff;
-    border: 0;
-    margin-bottom: 1em;
-    padding: 0.2em 0.6em;
-    border-radius: 7px;
-    width: 150px;
-    align-items: center;
-  }
+#toggle-dark-mode{
+  background-color: #ffffff;
+  border: 0;
+  margin-bottom: 1em;
+  padding: 0.2em 0.6em;
+  border-radius: 7px;
+  width: 150px;
+  align-items: center;
+}
 
-  .button{
-    background-color: #ffffff;
-    border: 0;
-    margin-bottom: 1em;
-    padding: 0.2em 0.6em;
-    border-radius: 7px;
-    width: 150px;
-  }
+.button{
+  background-color: #ffffff;
+  border: 0;
+  margin-bottom: 1em;
+  padding: 0.2em 0.6em;
+  border-radius: 7px;
+  width: 150px;
+}
 
 
-  .dark-mode .inputs {
-    background-color: #333;
-    color: #fff;
-  }
-  
+.dark-mode .inputs {
+  background-color: #333;
+  color: #fff;
+}
+
   
 
 
